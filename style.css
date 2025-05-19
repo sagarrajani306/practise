@@ -3,142 +3,56 @@
     padding: 0;
     box-sizing: border-box;
 }
-#background{
-    width: 100vw;
-    height:100vh;
-    background-image: url(./img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    animation: bgmover;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("./bg.html"); */
+    background-color: goldenrod;
 }
-#car{
-    height: 70px;
+.calculator{
+    width: 400px;
+    border: 1px solid white;
+padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+background: transparent;
+border-radius: 15px;
+}
+input{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+margin-bottom:20px;
+cursor: pointer;
+}
+input::placeholder{
+    color: white;
+    font-size: 25px;
+    text-align: left;
+}
+button{
     width: 70px;
-    position: absolute;
-    bottom: 250px;
-    left: 80px;
-    animation: carmover;
-    animation-duration: 10s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    /* animation-direction: alternate; */
+    height: 70px;
+    border-radius: 50%;
+    background: transparent;
+    /* border: none; */
+    color: white;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 10px 5px;
+    cursor: pointer;
 }
-#bike{
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    bottom: 150px;
-    left: 50px;
-    animation: bikemover;
-    animation-duration: 10s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    /* animation-direction: ; */
-    animation-delay:2s;
+.equal{
+    background-color: red;
 }
-#jet{
-    width: 90px;
-    height: 90px;
-position: absolute;
-right: 0px;
-top: 10px;
-animation: jetmover;
-animation-duration: 8s;
-animation-iteration-count: infinite;
-}
-#car img {
-    height: 100%;
-    width: 100%;}
-    #bike img {
-    height: 100%;
-    width: 100%;}
-    #jet img{
-        height: 100%;
-        width: 100%;
-    }
-@keyframes bgmover{
-    0%{
-        background-position: bottom left;
-        animation-fill-mode: forwards;
-
-    }
-    100%{
-        background-position: bottom right;
-        
-    }
-
-}
-@keyframes carmover {
- 0%{
-    left: 50px;
- }
-
- 100%{
-    left: 1300px;
- }
-}
-@keyframes bikemover {
- 0%{
-    left: 100px;
-    transform: rotate(0deg);
-    
- }
- /* 30%{
-    left: 300px;
-    transform: rotate(60deg);
- }*/
- /* 50%{
-     left: 300px;
-    transform: rotate(-360deg);
- }*/
-  /* 80%{ 
-    left: 1200px;
-    bottom: 170px;
-    transform: rotate(0deg); */
- 
- 100% {
-    left: 1300px;
-    bottom: 230px;
-    transform: rotate(0deg);
- }
-}
-@keyframes jetmover{
-    0%{
-        top: 0px;
-        right: 1200px;
-        transform: rotate(0deg);
-    }
-    /* 40%{
-        top: 0px;
-        right: 100px;
-         transform: rotate(-50deg);
-    }*/
-    /* 50%{
-        top: 400px;
-         bottom: -700px; 
-        transform: rotate(0deg);
-    }
-    60%{
-        top: 0px;
-        right:400px;
-        transform: rotate(80deg); 
-    }*/
-    /* 80%{
-        top: 435px;
-        right: 800px; 
-        transform: rotate(10deg);
-    }   */
-    100%
-    {
-        top: 400px;
-    right: 10px;
-    /* transition-delay: 10s; */
-    transform: rotate(0deg);
-    
-    }
+.operator{
+    color: rgb(16, 50, 243);
 }
